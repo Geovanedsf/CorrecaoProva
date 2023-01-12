@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.geovane.correcaoprova3.view.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_listReceitaFragment"
+            app:destination="@id/listReceitaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.geovane.correcaoprova3.view.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listReceitaFragment"
+        android:name="com.geovane.correcaoprova3.view.ListReceitaFragment"
+        android:label="fragment_list_receita"
+        tools:layout="@layout/fragment_list_receita" >
+        <action
+            android:id="@+id/action_listReceitaFragment_to_datailsReceitaFragment"
+            app:destination="@id/datailsReceitaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/datailsReceitaFragment"
+        android:name="com.geovane.correcaoprova3.DatailsReceitaFragment"
+        android:label="fragment_datails_receita"
+        tools:layout="@layout/fragment_datails_receita" />
+</navigation>
