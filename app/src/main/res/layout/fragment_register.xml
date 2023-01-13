@@ -11,32 +11,33 @@
         android:id="@+id/textNameReceitaEdit"
         android:layout_width="302dp"
         android:layout_height="42dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Nome da receita"
+        android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textIngredientes"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textIngredientes"
+        android:id="@+id/textIngredientesEdit"
         android:layout_width="408dp"
         android:layout_height="154dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Ingredientes"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/texViewtModoPreparo"
+        app:layout_constraintBottom_toTopOf="@+id/textModoPreparoEdit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textNameReceitaEdit" />
 
     <EditText
-        android:id="@+id/texViewtModoPreparo"
+        android:id="@+id/textModoPreparoEdit"
         android:layout_width="405dp"
         android:layout_height="127dp"
         android:ems="10"
@@ -45,7 +46,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonRegisterReceita"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textIngredientes" />
+        app:layout_constraintTop_toBottomOf="@+id/textIngredientesEdit" />
 
     <Button
         android:id="@+id/buttonRegisterReceita"
@@ -55,6 +56,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texViewtModoPreparo" />
+        app:layout_constraintTop_toBottomOf="@+id/textModoPreparoEdit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

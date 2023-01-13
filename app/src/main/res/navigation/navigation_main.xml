@@ -16,6 +16,11 @@
         <action
             android:id="@+id/action_menuFragment_to_listReceitaFragment"
             app:destination="@id/listReceitaFragment" />
+        <argument
+            android:name="receita"
+            app:argType="com.geovane.correcaoprova3.model.Receita"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 
     <fragment
@@ -27,6 +32,7 @@
             android:id="@+id/action_registerFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/listReceitaFragment"
         android:name="com.geovane.correcaoprova3.view.ListReceitaFragment"
@@ -35,11 +41,16 @@
         <action
             android:id="@+id/action_listReceitaFragment_to_datailsReceitaFragment"
             app:destination="@id/datailsReceitaFragment" />
+        <argument
+            android:name="receita"
+            app:argType="com.geovane.correcaoprova3.model.Receita"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 
     <fragment
         android:id="@+id/datailsReceitaFragment"
-        android:name="com.geovane.correcaoprova3.DatailsReceitaFragment"
+        android:name="com.geovane.correcaoprova3.view.DatailsReceitaFragment"
         android:label="fragment_datails_receita"
         tools:layout="@layout/fragment_datails_receita" />
 </navigation>
